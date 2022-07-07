@@ -4,9 +4,11 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+
 import Grid from '@mui/material/Grid';
+//import Link from '@mui/material/Link';
+import { Link as RouterLink } from "react-router-dom";
+
 
 export default function Header() {
   return (
@@ -18,7 +20,7 @@ export default function Header() {
               <Typography> A a s t h a </Typography>
             </Grid>
             <Grid item xs={0.75}>
-              <Button color="inherit">Home</Button>
+              <Button component={RouterLink} to="/" color="inherit">Home</Button>
             </Grid>
             <Grid item xs={1}>
               <Button color="inherit">News</Button>
@@ -30,7 +32,7 @@ export default function Header() {
               <Button color="inherit">Service</Button>
             </Grid>
             <Grid item xs={1}>
-              <Button color="inherit">Gallery</Button>
+              <Button component={RouterLink} to="/gallery" color="inherit">Gallery</Button>
             </Grid>
             <Grid item xs={1}>
               <Button color="inherit">Program</Button>
@@ -39,7 +41,7 @@ export default function Header() {
               <Button color="inherit">Notice</Button>
             </Grid>
             <Grid item xs={1}>
-              <Button color="inherit">Downloads</Button>
+              <Button component={RouterLink} to="/downloads" color="inherit">Downloads</Button>
             </Grid>
             <Grid item xs={1}>
               <Button color="inherit">Contact</Button>

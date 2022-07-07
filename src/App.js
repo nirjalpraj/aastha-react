@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import * as React from 'react';
 
 import Carousel from 'react-material-ui-carousel';
-import { Paper, Button, Slide } from '@mui/material';
+import { Paper} from '@mui/material';
 import Grid from '@mui/material/Grid';
 import TabPanel from './components/SideComponent';
 

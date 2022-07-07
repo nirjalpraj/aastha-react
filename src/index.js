@@ -3,14 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from "react-router-dom";
+import {BrowserRouter,
+        Routes,
+        Route, } from "react-router-dom";
+import Gallery from './pages/Gallery';
+import Downloads from './pages/Downloads';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="gallery" element={<Gallery />} />
+      <Route path="downloads" element = {<Downloads />}/>
+    </Routes>
   </BrowserRouter>
   
 );
