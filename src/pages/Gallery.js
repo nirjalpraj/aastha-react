@@ -14,7 +14,13 @@ const Gallery = () => {
     return(
         <div>
             <Header/>
-                  <GridFolder/>           
+                  <Grid container>
+                      <Grid item xs={1}/>
+                      <Grid item xs={9}>
+                        <GridFolder/> 
+                      </Grid>
+                  </Grid>
+                            
             <Footer/>
 
         </div>

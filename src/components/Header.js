@@ -1,16 +1,23 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 
+import { AppBar, Box, Toolbar, Typography, Button, Menu, MenuItem, Fade} from '@mui/material';
 import Grid from '@mui/material/Grid';
 //import Link from '@mui/material/Link';
 import { Link as RouterLink } from "react-router-dom";
 
 
 export default function Header() {
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  //Above code is for dropdown menu of about
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -22,12 +29,36 @@ export default function Header() {
             <Grid item xs={0.75}>
               <Button component={RouterLink} to="/" color="inherit">Home</Button>
             </Grid>
+
             <Grid item xs={1}>
-              <Button color="inherit">News</Button>
+              <Button 
+                color="inherit" 
+                id="basic-button"
+                aria-controls={open ? 'basic-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+                onClick={handleClick}>About</Button>
+
+              <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                  'aria-labelledby': 'basic-button',
+                }}
+              >
+                <MenuItem onClick={handleClose}>About us</MenuItem>
+                <MenuItem onClick={handleClose}>Mission & Vision</MenuItem>
+                <MenuItem onClick={handleClose}>BOD</MenuItem>
+                <MenuItem onClick={handleClose}>Message from Chairperson</MenuItem>
+                <MenuItem onClick={handleClose}>Message from CEO</MenuItem>
+
+              </Menu>
+
             </Grid>
-            <Grid item xs={1}>
-              <Button color="inherit">About</Button>
-            </Grid>
+
+
             <Grid item xs={1}>
               <Button color="inherit">Service</Button>
             </Grid>
@@ -38,7 +69,10 @@ export default function Header() {
               <Button color="inherit">Program</Button>
             </Grid>
             <Grid item xs={1}>
-              <Button color="inherit">Notice</Button>
+            <Button component={RouterLink} to="/notice" color="inherit">Notice</Button>
+            </Grid>
+            <Grid item xs={1}>
+              <Button color="inherit">News</Button>
             </Grid>
             <Grid item xs={1}>
               <Button component={RouterLink} to="/downloads" color="inherit">Downloads</Button>

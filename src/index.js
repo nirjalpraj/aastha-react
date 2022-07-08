@@ -8,6 +8,7 @@ import {BrowserRouter,
         Route, } from "react-router-dom";
 import Gallery from './pages/Gallery';
 import Downloads from './pages/Downloads';
+import Notice from './pages/Notice';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="gallery" element={<Gallery />} />
       <Route path="downloads" element = {<Downloads />}/>
+      <Route path="notice" element = {<Notice />}/>
     </Routes>
   </BrowserRouter>
   
