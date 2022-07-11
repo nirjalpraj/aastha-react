@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { AppBar, Box, Toolbar, Typography, Button, Menu, MenuItem, Fade} from '@mui/material';
+import { AppBar, Box, Toolbar, Typography, Button, Menu, MenuItem } from '@mui/material';
 import Grid from '@mui/material/Grid';
 //import Link from '@mui/material/Link';
 import { Link as RouterLink } from "react-router-dom";
@@ -48,11 +48,11 @@ export default function Header() {
                   'aria-labelledby': 'basic-button',
                 }}
               >
-                <MenuItem onClick={handleClose}>About us</MenuItem>
-                <MenuItem onClick={handleClose}>Mission & Vision</MenuItem>
-                <MenuItem onClick={handleClose}>BOD</MenuItem>
-                <MenuItem onClick={handleClose}>Message from Chairperson</MenuItem>
-                <MenuItem onClick={handleClose}>Message from CEO</MenuItem>
+                <MenuItem component={RouterLink} to="/aboutus" onClick={handleClose}>About Us</MenuItem>
+                <MenuItem component={RouterLink} to="/mission&vision" onClick={handleClose}>Mission & Vision</MenuItem>
+                <MenuItem component={RouterLink} to="/bod" onClick={handleClose}>BOD</MenuItem>
+                <MenuItem component={RouterLink} to="/message-from-chairperson" onClick={handleClose}>Message from Chairperson</MenuItem>
+                <MenuItem component={RouterLink} to="/message-from-ceo" onClick={handleClose}>Message from CEO</MenuItem>
 
               </Menu>
 
@@ -78,7 +78,7 @@ export default function Header() {
               <Button component={RouterLink} to="/downloads" color="inherit">Downloads</Button>
             </Grid>
             <Grid item xs={1}>
-              <Button color="inherit">Contact</Button>
+              <Button component={RouterLink} to="/contact" color="inherit">Contact</Button>
             </Grid>
           </Grid>
           {/* <IconButton

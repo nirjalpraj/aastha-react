@@ -9,6 +9,12 @@ import {BrowserRouter,
 import Gallery from './pages/Gallery';
 import Downloads from './pages/Downloads';
 import Notice from './pages/Notice';
+import Contact from './pages/Contact';
+import AboutUs from './pages/AboutUs';
+import Mission from './pages/Mission';
+import BOD from "./pages/BOD";
+import MessageFromChairperson from './pages/MessageFromChairperson';
+import MessageFromCEO from './pages/MessageFromCEO';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +24,17 @@ root.render(
       <Route path="gallery" element={<Gallery />} />
       <Route path="downloads" element = {<Downloads />}/>
       <Route path="notice" element = {<Notice />}/>
+      <Route path="contact" element={<Contact/>}/>
+      <Route path="aboutus" element={<AboutUs/>}/>
+      <Route path="mission&vision" element={<Mission/>}/>
+      <Route path="bod" element={<BOD/>}/>
+      <Route path="message-from-chairperson" element={<MessageFromChairperson/>}/>
+      <Route path="message-from-ceo" element={<MessageFromCEO/>}/>
+
+
+
+      
+
     </Routes>
   </BrowserRouter>
   
