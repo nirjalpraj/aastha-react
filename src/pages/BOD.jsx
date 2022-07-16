@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Header from '../components/Header';
-import {Grid, Paper, Box, Typography, Card} from '@mui/material';
+import {Grid, Box, Typography, Card} from '@mui/material';
 
 const BOD = () => {
     return(

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Grid,Paper, Typography, Box} from '@mui/material';
+import {Grid, Typography, Box} from '@mui/material';
 import Header from '../components/Header';
 
 const AboutUs = () => {

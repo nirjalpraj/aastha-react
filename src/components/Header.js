@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" color='success'>
         <Toolbar>
           <Grid container spacing={0.5}>
             <Grid item xs={2}>
