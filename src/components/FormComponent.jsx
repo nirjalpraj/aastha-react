@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 
-import {Box, Button, TextField, Grid, Typography, Paper, Card} from '@mui/material';
+import {Box, Button, TextField, Grid, Typography} from '@mui/material';
 
 import emailjs from '@emailjs/browser';
 import { Email } from '@mui/icons-material';
