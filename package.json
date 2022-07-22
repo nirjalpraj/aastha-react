@@ -2,7 +2,7 @@
   "name": "aastha-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nirjalpraj.github.io/aastha-react/",
+  "homepage": "https://nirjalpraj.github.io/",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.9.3",
@@ -14,6 +14,7 @@
     "@testing-library/user-event": "^13.5.0",
     "formik": "^2.2.9",
     "formik-mui": "^5.0.0-alpha.0",
+    "gh-pages": "^4.0.0",
     "mdb-react-ui-kit": "^4.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
