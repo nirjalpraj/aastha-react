@@ -8,15 +8,20 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 const Footer = () => {
   return (
-    <Box paddingTop={8} marginTop={10} paddingBottom={4} sx={{ backgroundColor: "#078080", minHeight: "30vh" }}>
+    <Box
+      paddingTop={8}
+      marginTop={10}
+      paddingBottom={4}
+      sx={{ backgroundColor: "#2C5F2DFF", minHeight: "30vh" }}
+    >
       <Grid container spacing={2}>
-        
         <Grid container direction="column" item xs={3} spacing={11}>
-          <Grid item/>
+          <Grid item />
           <Grid item>
-            <Typography variant="h5" color="#fff">A  a  s  t  h  a</Typography>
+            <Typography variant="h5" color="#fff">
+              A a s t h a
+            </Typography>
           </Grid>
-
         </Grid>
 
         <Grid container direction="column" item xs={3} spacing={2}>
@@ -133,7 +138,7 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={11}>
-              <Typography style={{ textAlign: "center",color: "#fff" }}>
+              <Typography style={{ textAlign: "center", color: "#fff" }}>
                 Bolachhen-4, Bhaktapur
               </Typography>
             </Grid>
